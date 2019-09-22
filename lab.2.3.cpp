@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main() 
 {
@@ -8,15 +9,10 @@ int main()
     if (((c>a)&&(c>b))||((c<a)&&(c<b))){
         cout<<"ERROR"<<endl;}
     else {
-        if (c>a){
-        ac=c-a;
-        bc=b-c;
-    }
-    else {
-        ac=a-c;
-        bc=c-b;
-    }
-    pr=ac*bc;
+        ac=abs(a-c);
+        bc=abs(b-c);
+        pr=ac*bc;
     cout<<"Proizvedenie="<<pr<<endl;
     }
+    return 0;
 }
